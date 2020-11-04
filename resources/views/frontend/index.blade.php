@@ -26,7 +26,7 @@
             <form id="reservation_formm" name="reservation_form" class="reservation-form mb-0" method="post" action="{{ url('register') }}">
               @csrf
               <div class="col-md-12">
-                <h3 class="text-white mt-0 mb-10">Get A Free<span class="text-theme-color-2"> Registration</span>!</h3>
+                <h3 class="text-white mt-0 mb-10"><span class="text-theme-color-2">{{__('messages.register')}}</span>!</h3>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="form-group mb-15">
@@ -945,10 +945,10 @@
         <div class="row">
           <div class="call-to-action">
             <div class="col-md-9">
-              <h3 class="mt-5 text-white font-weight-600">Edupress The Best Education & University HTML Template Ever!</h3>
+              <h3 class="mt-5 text-white font-weight-600">{{__('messages.edupress')}}</h3>
             </div>
             <div class="col-md-3 text-right flip sm-text-center"> 
-              <a class="btn btn-flat btn-theme-colored btn-lg mt-5" href="#">Purchase Now<i class="fa fa-angle-double-right font-16 ml-10"></i></a>  
+              <a class="btn btn-flat btn-theme-colored btn-lg mt-5" href="#">{{__('messages.purchase')}}<i class="fa fa-angle-double-right font-16 ml-10"></i></a>  
             </div>
           </div>
         </div>

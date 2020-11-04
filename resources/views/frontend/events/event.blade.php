@@ -1018,8 +1018,8 @@
                           </ul>
                           <p>{{$objEvent->description}}</p>
                           <div class="mt-10">
-                            <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="#">Register</a>
-                           <a href="{{ url('/event-details') }}/{{ $objEvent->id}}" class="btn btn-dark btn-sm mt-10">Details</a>
+                          <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="#">{{__('messages.registeration')}}</a>
+                           <a href="{{ url('/event-details') }}/{{ $objEvent->id}}" class="btn btn-dark btn-sm mt-10">{{__('messages.details')}}</a>
                           </div>
                         </div>
                       </div>
@@ -1108,7 +1108,7 @@
                           </ul>
                           <p>Lorem ipsum dolor sit amet elit. Cum veritatis sequi nulla nihil, dolor amit voluptatum nemo adipisci eligendi! Sed nisi perferendis.</p>
                           <div class="mt-10">
-                           <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="#">Register</a>
+                           <a class="btn btn-dark btn-theme-colored btn-sm mt-10" href="#"> </a>
                            <a href="#" class="btn btn-dark btn-sm mt-10">Details</a>
                           </div>
                         </div>

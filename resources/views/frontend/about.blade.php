@@ -268,7 +268,7 @@
         <div class="row">
           <div class="call-to-action">
             <div class="col-md-6">
-              <h3 class="mt-5 mb-5 text-white vertical-align-middle"><i class="pe-7s-mail mr-10 font-48 vertical-align-middle"></i> SUBSCRIBE TO OUR NEWSLETTER</h3>
+              <h3 class="mt-5 mb-5 text-white vertical-align-middle"><i class="pe-7s-mail mr-10 font-48 vertical-align-middle"></i> {{__('messages.newsletter')}}</h3>
             </div>
             <div class="col-md-6">
               <!-- Mailchimp Subscription Form Starts Here -->
@@ -276,7 +276,7 @@
                 <div class="input-group">
                   <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control input-lg font-16" data-height="45px" id="mce-EMAIL-footer">
                   <span class="input-group-btn">
-                    <button data-height="45px" class="btn bg-theme-colored text-white btn-xs m-0 font-14" type="submit">Subscribe</button>
+                  <button data-height="45px" class="btn bg-theme-colored text-white btn-xs m-0 font-14" type="submit">{{__('messages.subscribe')}}</button>
                   </span>
                 </div>
               </form>

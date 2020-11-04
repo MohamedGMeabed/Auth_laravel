@@ -104,15 +104,15 @@
               <ul class="list-inline font-13 sm-text-center mt-5">
                
                 <li>
-                  <a class="text-white" href="#">FAQ</a>
+                <a class="text-white" href="#">{{__('messages.faq')}}</a>
                 </li>
                 <li class="text-white">|</li>
                 <li>
-                  <a class="text-white" href="#">Help Desk</a>
+                <a class="text-white" href="#">{{__('messages.helpdesk')}}</a>
                 </li>
                 <li class="text-white">|</li>
                 <li>
-                  <a class="text-white" href="#">Login</a>
+                  <a class="text-white" href="#">{{__('messages.login')}}</a>
                 </li>
              
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -225,7 +225,7 @@
               <ul class="list-inline">
                 <li><i class="fa fa-phone-square text-theme-colored font-36 mt-5 sm-display-block"></i></li>
                 <li>
-                  <a href="#" class="font-12 text-gray text-uppercase">Call us today!</a>
+                  <a href="#" class="font-12 text-gray text-uppercase">{{__('messages.callustoday')}}</a>
                   <h5 class="font-14 m-0"> +(012) 345 6789</h5>
                 </li>
               </ul>
@@ -236,7 +236,7 @@
               <ul class="list-inline">
                 <li><i class="fa fa-clock-o text-theme-colored font-36 mt-5 sm-display-block"></i></li>
                 <li>
-                  <a href="#" class="font-12 text-gray text-uppercase">We are open!</a>
+                <a href="#" class="font-12 text-gray text-uppercase">{{__('messages.weareopen')}}</a>
                   <h5 class="font-13 text-black m-0"> Mon-Fri 8:00-16:00</h5>
                 </li>
               </ul>
@@ -267,25 +267,25 @@
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
-            <h4 class="widget-title">Useful Links</h4>
+            <h4 class="widget-title">{{__('messages.usefullink')}}</h4>
             <ul class="list angle-double-right list-border">
-              <li><a href="page-about-style1.html">About Us</a></li>
-              <li><a href="page-course-list.html">Our Courses</a></li>
-              <li><a href="page-pricing-style1.html">Pricing Table</a></li>
-              <li><a href="page-gallery-3col.html">Gallery</a></li>
-              <li><a href="shop-category.html">Shop</a></li>              
+              <li><a href="page-about-style1.html">{{__('messages.aboutus')}}</a></li>
+              <li><a href="page-course-list.html">{{__('messages.course')}}</a></li>
+              <li><a href="page-pricing-style1.html">{{__('messages.pricetable')}}</a></li>
+              <li><a href="page-gallery-3col.html">{{__('messages.gallery')}}</a></li>
+              <li><a href="shop-category.html">{{__('messages.shop')}}</a></li>              
             </ul>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
-            <h4 class="widget-title">Twitter Feed</h4>
+            <h4 class="widget-title">{{__('messages.twitter')}}</h4>
             <div class="twitter-feed list-border clearfix" data-username="Envato" data-count="2"></div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
-            <h4 class="widget-title line-bottom-theme-colored-2">Opening Hours</h4>
+            <h4 class="widget-title line-bottom-theme-colored-2">{{__('messages.openinghour')}}</h4>
             <div class="opening-hours">
               <ul class="list-border">
                 <li class="clearfix"> <span> Mon - Tues :  </span>
@@ -298,7 +298,7 @@
                   <div class="value pull-right"> 3.00 pm - 8.00 pm </div>
                 </li>
                 <li class="clearfix"> <span> Sun : </span>
-                  <div class="value pull-right"> Closed </div>
+                  <div class="value pull-right"> {{__('messages.close')}} </div>
                 </li>
               </ul>
             </div>
@@ -308,7 +308,7 @@
       <div class="row mt-30">
         <div class="col-md-2">
           <div class="widget dark">
-            <h5 class="widget-title mb-10">Call Us Now</h5>
+            <h5 class="widget-title mb-10">{{__('messages.callusnow')}}</h5>
             <div class="text-gray">
               +61 3 1234 5678 <br>
               +12 3 1234 5678
@@ -317,7 +317,7 @@
         </div>
         <div class="col-md-3">
           <div class="widget dark">
-            <h5 class="widget-title mb-10">Connect With Us</h5>
+            <h5 class="widget-title mb-10">{{__('messages.connectwithus')}}</h5>
             <ul class="styled-icons icon-bordered icon-sm">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -330,13 +330,13 @@
         </div>
         <div class="col-md-5 col-md-offset-2">
           <div class="widget dark">
-            <h5 class="widget-title mb-10">Subscribe Us</h5>
+            <h5 class="widget-title mb-10">{{__('messages.subscribe')}}</h5>
             <!-- Mailchimp Subscription Form Starts Here -->
             <form id="mailchimp-subscription-form-footer" class="newsletter-form">
               <div class="input-group">
                 <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control input-lg font-16" data-height="45px" id="mce-EMAIL-footer">
                 <span class="input-group-btn">
-                  <button data-height="45px" class="btn bg-theme-color-2 text-white btn-xs m-0 font-14" type="submit">Subscribe</button>
+                  <button data-height="45px" class="btn bg-theme-color-2 text-white btn-xs m-0 font-14" type="submit">{{__('messages.subscribe')}}</button>
                 </span>
               </div>
             </form>
@@ -368,21 +368,21 @@
       <div class="container pt-20 pb-20">
         <div class="row">
           <div class="col-md-6">
-            <p class="font-11 text-black-777 m-0">Copyright &copy;2016 ThemeMascot. All Rights Reserved</p>
+            <p class="font-11 text-black-777 m-0">{{__('messages.copyright')}} &copy;2016 ThemeMascot.{{__('messages.reserved')}}</p>
           </div>
           <div class="col-md-6 text-right">
             <div class="widget no-border m-0">
               <ul class="list-inline sm-text-center mt-5 font-12">
                 <li>
-                  <a href="#">FAQ</a>
+                  <a href="#">{{__('messages.faq')}}</a>
                 </li>
                 <li>|</li>
                 <li>
-                  <a href="#">Help Desk</a>
+                  <a href="#">{{__('messages.helpdesk')}}</a>
                 </li>
                 <li>|</li>
                 <li>
-                  <a href="#">Support</a>
+                  <a href="#">{{__('messages.support')}}</a>
                 </li>
               </ul>
             </div>
