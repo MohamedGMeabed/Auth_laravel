@@ -114,7 +114,7 @@
       <div class="container">
         <div class="section-content">
           <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3 pb-sm-20 ">
+            {{-- <div class="col-xs-12 col-sm-6 col-md-3 pb-sm-20 ">
               <h2 class="line-bottom font-20 text-theme-colored text-uppercase mb-10 mt-0">Welcome to Our<span class="text-theme-color-2"> University</span></h2>
               <p class="lead font-18">We care for children, protect their welfare, and prepare them for the future</p>
               <p>Lorem ipsum dolor sit ametes redum, consectetur adipisicing elites. Istees recusandae laboriosam, voluptatibus culpa quas sint, deleniti delectus tempora. adipisicing elites. Istees recusandae laboriosam</p>
@@ -150,7 +150,7 @@
                 <a href="#" class="btn btn-xs btn-theme-colored">Read more</a>
               </div>
             </div>
-          </div>
+          </div> --}}
         </div>
       </div>
     </section>
