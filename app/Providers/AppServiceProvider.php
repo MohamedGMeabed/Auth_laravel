@@ -29,22 +29,22 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('*', function ($view) {
             $title="";
             $breadcrub ="";
-            if(Request::segment(1)==''){
+            if(Request::segment(2)==''){
                 $title ="Home";
            
-            }elseif(Request::segment(1)=='about-us'){
+            }elseif(Request::segment(2)=='about-us'){
                 $title ="About Us";
                
-            }elseif(Request::segment(1)=='contact-us'){
+            }elseif(Request::segment(2)=='contact-us'){
                 $title ="Contact Us";
                
-            }elseif(Request::segment(1)=='events'){
+            }elseif(Request::segment(2)=='events'){
                 $title ="Events";
                 
-            }elseif(Request::segment(1)=='event-details'){
+            }elseif(Request::segment(2)=='event-details'){
                 $title ="Event-Details";
                 
-            }elseif(Request::segment(1)=='course_details'){
+            }elseif(Request::segment(2)=='course_details'){
                 $title ="Course-Details";
                 
             }

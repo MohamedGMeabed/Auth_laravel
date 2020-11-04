@@ -45,5 +45,19 @@ return [
      'newsletter'=>' SUBSCRIBE TO OUR NEWSLETTER',
 
 
+     ////contact us
+     'Call Us'=>'Call Us',
+     'Phone:'=>'Phone:',
+     'Address'=>'Address',
+     'Email'=>'Email',
+     'Find Our Location'=>'Find Our Location',
+     'CharityFund Office'=>'CharityFund Office',
+     'Interested in discussing?'=>'Interested in discussing?',
+     'Name'=>'Name',
+     'Subject'=>'Subject',
+     'Phone'=>'Phone',
+     'Message'=>'Message',
+     'Send your message'=>'Send your message',
+     'Reset'=>'Reset',
     ];
 ?>
