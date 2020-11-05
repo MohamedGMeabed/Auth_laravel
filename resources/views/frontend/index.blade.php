@@ -383,7 +383,7 @@
                     <h5 class="text-theme-color">{{ $objTeacher->address }}</h5>
                     <p class="mb-20">{{ $objTeacher->position }}</p>
                     <ul class="styled-icons icon-sm icon-dark icon-theme-colored">
-                      <li><a href="#"><i class="{{ $objTeacher->facebook }}"></i></a></li>
+                      <li><a href="{{ $objTeacher->facebook }}"><i class="{{ $objTeacher->facebook }}"></i></a></li>
                       <li><a href="#"><i class="{{ $objTeacher->twitter }}"></i></a></li>
                       <li><a href="#"><i class="{{ $objTeacher->linkedin }}"></i></a></li>
                       <li><a href="#"><i class="{{ $objTeacher->skype }}"></i></a></li>

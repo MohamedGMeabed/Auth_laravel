@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 03 نوفمبر 2020 الساعة 23:15
+-- Generation Time: 05 نوفمبر 2020 الساعة 12:56
 -- إصدار الخادم: 10.1.38-MariaDB
 -- PHP Version: 7.3.2
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel_auth`
+-- Database: `laravel_auth2`
 --
 
 -- --------------------------------------------------------
@@ -362,7 +362,6 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2020_05_21_200000_create_team_user_table', 1),
 (8, '2020_10_14_233034_create_sessions_table', 1),
 (9, '2020_10_15_113302_create_courses_table', 1),
-(10, '2020_10_15_113340_create_teachers_table', 1),
 (11, '2020_10_15_113409_create_sliders_table', 1),
 (12, '2020_10_18_140937_create_events_table', 1),
 (13, '2020_10_18_142158_create_speakers_table', 1),
@@ -379,7 +378,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (25, '2020_11_02_124646_create_category_gallery_table', 5),
 (26, '2020_11_02_124954_create_galleries_table', 5),
 (27, '2020_11_02_204408_create_features_table', 6),
-(28, '2020_11_03_115432_create_course_topics_table', 7);
+(28, '2020_11_03_115432_create_course_topics_table', 7),
+(29, '2020_11_04_122157_create_fqas_table', 8),
+(30, '2020_11_05_111812_create_teachers_table', 9);
 
 -- --------------------------------------------------------
 
@@ -478,8 +479,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('6YbZdi0rfrYrn5GRgkiqlRkTpBsCkE5Fve0Gat2G', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiUVVUdlp4VklEbEx4UUFlUlJscjh0WFVXbGExVDZieVBVM0N2cjlaYyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC93ZWxjb21lIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo2OiJsb2NhbGUiO3M6MjoiYXIiO30=', 1604427689),
-('NKaExwgEtSLpYzbWVEKaJXV8GqhlxReIC1QYitTv', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaU5kWW51THpmMVdzUVRzSVNIVk5hMlZBT2pvc2U3RzNWNTlST1hQYiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1604440677);
+('arCavIutD2SerC2KAz1fKWDtLhFmj6otXF4OI5vY', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiTjgyOU1PaUV1aW80dnB4bFVMSGNQVHdXV0FCTDJWbWx0WWJmWDYyNCI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQzOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYWRtaW4vdGVhY2hlcnMvY3JlYXRlIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFo3RjY0R1JwRG1zS0lMcUQySjJreE8xS0c0RXQ5ZkdLSnVuRDBTbG1iU0tJUzRyUFhJLmFDIjt9', 1604576257),
+('pJk4kqBcooHmR4kGlSWFIW3iSWE4F6vudLU5WbpV', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiNE94a09tdEt2YmNocEdXcXpBd0lRQVBLc1AwT3dObXVZTnBCMnkwTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJuZXciO2E6MDp7fXM6Mzoib2xkIjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hciI7fXM6NjoibG9jYWxlIjtzOjI6ImFyIjt9', 1604576808),
+('Redohni2iI0COkRcuHVN2HaJHq1QqhEgP50eN4SY', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiQVRiU1h0SE83QU5wUzFab05DUmREQXI1RE9SbmVNVDNHV1RpT3YydiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJuZXciO2E6MDp7fXM6Mzoib2xkIjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9lbiI7fXM6NjoibG9jYWxlIjtzOjI6ImVuIjt9', 1604514299);
 
 -- --------------------------------------------------------
 
@@ -566,8 +568,9 @@ INSERT INTO `sub_categories` (`id`, `name`, `main_cat_id`, `created_at`, `update
 CREATE TABLE `teachers` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `phone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `age` int(11) NOT NULL,
+  `position` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` char(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `facebook` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `twitter` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `linkedin` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -575,6 +578,13 @@ CREATE TABLE `teachers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- إرجاع أو استيراد بيانات الجدول `teachers`
+--
+
+INSERT INTO `teachers` (`id`, `name`, `position`, `address`, `image`, `facebook`, `twitter`, `linkedin`, `skype`, `created_at`, `updated_at`) VALUES
+(1, 'Mohamed Gaber', 'web Developer', 'Bani Suef', 'images/teachers/1604576256.JPG', 'https://www.facebook.com/profile.php?id=100004182104364', 'https://www.facebook.com/profile.php?id=100004182104364', 'https://www.facebook.com/profile.php?id=100004182104364', 'https://www.facebook.com/profile.php?id=100004182104364', '2020-11-05 09:37:36', '2020-11-05 09:37:36');
 
 -- --------------------------------------------------------
 
@@ -926,7 +936,7 @@ ALTER TABLE `main_categories`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -968,7 +978,7 @@ ALTER TABLE `sub_categories`
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `teams`
