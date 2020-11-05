@@ -691,23 +691,24 @@
               <h2 class="line-bottom mt-0 line-height-1">Why <span class="text-theme-color-2">Choose Us?</span></h2>
               <p class="mb-10">The Cweren Law Firm is a recognized leader in landlord tenant representation throughout Texas.The largest professional property.</p>
               <div id="accordion1" class="panel-group accordion">
-
-                @foreach($arrFqas as  $objfqa)
-
+              
+              @foreach($arrFqas as  $objfqa)
                   <div class="panel">
-                    <div class="panel-title"> <a class="active" data-parent="#accordion1" data-toggle="collapse"
-                    href="#accordion11" aria-expanded="true">
-                      <span class="open-sub"></span> {{ $objfqa->question  }} </a> </div>
-                    <div id="accordion11" class="panel-collapse collapse in" role="tablist" aria-expanded="true">
+                    <div class="panel-title">
+                     <a class="active" data-parent="#accordion1" data-toggle="collapse" href="#{{ $objfqa->id}}" aria-expanded="true">
+                      <span class="open-sub"></span> {{ $objfqa->question  }}
+                       </a>
+                       </div>
+                    <div id="{{ $objfqa->id}}" class="panel-collapse collapse in" role="tablist" aria-expanded="true">
                       <div class="panel-content">
                         <p> {{ $objfqa->answer }} </p>
                       </div>
                     </div>
                   </div>
-
-                @endforeach
-
+                  @endforeach
+                
               </div>
+              
             </div>
           </div>
         </div>
