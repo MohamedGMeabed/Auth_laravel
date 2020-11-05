@@ -13,6 +13,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\CategoryGalleryController;
 use App\Http\Controllers\FeaturesController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\FqaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -145,6 +147,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
   Route::get('admin/news/{id}','App\Http\Controllers\NewsController@GetSUbCategoryByAjax');
   
   
+ ##############################    FQA Module   ##############################
+
+ Route::resource('admin/fqa', FqaController::class)->middleware('auth');
 
 
 // Route::get('/welcome', function () {

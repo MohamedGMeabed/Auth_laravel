@@ -16,6 +16,7 @@ use App\Models\Gallery;
 use App\Models\Feature;
 use App\Models\CourseTopic;
 use App\Models\Teacher;
+use App\Models\Fqa;
 use Redirect;
 use DB;
 use App\Http\Requests\Register;
@@ -33,9 +34,10 @@ class HomeController extends Controller
         $arrCategoryGallery = CategoryGallery::all();
         $arrGallery = Gallery::all();
         $arrFeature = Feature::all();
-          
+        $arrFqas = Fqa::all();
+
         return view('frontend.index',compact('arrCourses','arrTeachers','arrSliders','arrTestimonials'
-                      ,'arrCategoryGallery','arrGallery','arrFeature'));
+                      ,'arrCategoryGallery','arrGallery','arrFeature','arrFqas'));
     }
 
     public function AboutUs()
