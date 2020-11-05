@@ -118,6 +118,13 @@
                   Features
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link {{ (Request::segment(1)=='admin' && Request::segment(2)=='teachers') ? 'active' : ''  }} " href="{{ url('admin/teachers') }}">
+                  <span data-feather="list"></span>
+                  Teachers
+                </a>
+              </li>
+
                
                
               

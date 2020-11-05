@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Course;
-use App\Models\Teacher;
 use App\Models\Slider;
 use App\Models\Event;
 use App\Models\Speaker;
@@ -16,6 +15,7 @@ use App\Models\CategoryGallery;
 use App\Models\Gallery;
 use App\Models\Feature;
 use App\Models\CourseTopic;
+use App\Models\Teacher;
 use Redirect;
 use DB;
 use App\Http\Requests\Register;

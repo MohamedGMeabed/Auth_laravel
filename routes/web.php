@@ -12,6 +12,7 @@ use App\Http\Controllers\MainCategoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\CategoryGalleryController;
 use App\Http\Controllers\FeaturesController;
+use App\Http\Controllers\TeacherController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -132,7 +133,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
   
   ############################################################
 
-  
+  Route::resource('admin/teachers', TeacherController::class)->middleware('auth');
   
   Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
       return view('dashboard');

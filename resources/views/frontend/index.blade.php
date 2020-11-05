@@ -376,16 +376,17 @@
               <div class="item">
                 <div class="team-members maxwidth400">
                   <div class="team-thumb">
-                    <img class="img-fullwidth" alt="" src="http://placehold.it/260x230">
+                    <img class="img-fullwidth" alt="" src="{{ $objTeacher->image  }}">
                   </div>
                   <div class="team-bottom-part border-bottom-theme-color-2-2px bg-lighter border-1px text-center p-10 pt-20 pb-10">
                     <h4 class="text-uppercase font-raleway font-weight-600 m-0"><a class="text-theme-color-2" href="page-teachers-details.html"> {{ $objTeacher->name }}</a></h4>
-                    <h5 class="text-theme-color">{{ $objTeacher->phone }}</h5>
+                    <h5 class="text-theme-color">{{ $objTeacher->address }}</h5>
+                    <p class="mb-20">{{ $objTeacher->position }}</p>
                     <ul class="styled-icons icon-sm icon-dark icon-theme-colored">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                      <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                      <li><a href="#"><i class="{{ $objTeacher->facebook }}"></i></a></li>
+                      <li><a href="#"><i class="{{ $objTeacher->twitter }}"></i></a></li>
+                      <li><a href="#"><i class="{{ $objTeacher->linkedin }}"></i></a></li>
+                      <li><a href="#"><i class="{{ $objTeacher->skype }}"></i></a></li>
                     </ul>
                   </div>
                 </div>

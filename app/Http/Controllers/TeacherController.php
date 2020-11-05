@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\Models\Teacher;
 use Redirect;
-use App\Http\Requests\ValidateTeacher;
-
+use Validator;
+use App\Http\Requests\TeacherValidate;
 
 
 
@@ -21,8 +22,8 @@ class TeacherController extends Controller
     public function index()
     {
         //
-       $arrTeachers =  Teacher::all();
-       return view('backend.teachers.index',compact('arrTeachers'));
+        $arrTeachers =  Teacher::all();
+        return view('backend.teacher.index',compact('arrTeachers'));
     }
 
     /**
@@ -32,7 +33,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        return view('backend.teachers.create');
+        return view('backend.teacher.create');
     }
 
     /**
@@ -41,23 +42,22 @@ class TeacherController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(ValidateTeacher $request)
+    public function store(TeacherValidate $request)
     {
 
         // user Eloquent
         $objTeacher = new Teacher();
         $objTeacher->name = $request->name;
-        $objTeacher->title = $request->title;
-        $objTeacher->age = $request->age;
-        $objTeacher->phone =$request->phone;
-        $objTeacher->facebook =$request->facebook;
-        $objTeacher->image =$request->image;
+        $objTeacher->position = $request->position;
+        $objTeacher->address = $request->address;
+        $objTeacher->facebook = $request->facebook;
+        $objTeacher->twitter = $request->twitter;
+        $objTeacher->linkedin = $request->linkedin;
+        $objTeacher->skype = $request->skype;
 
-
-
-
+        # upload image 
         $image = "";
-
+        #  validate if image upload or not 
         if($request->hasFile('image')){
             $image = $request->image;
             $image_name = time().".".$image->getClientOriginalExtension();
@@ -80,7 +80,7 @@ class TeacherController extends Controller
     {
         
         $objTeacher = Teacher::findOrFail($id);
-        return view('backend.teachers.show',compact('objTeacher'));
+        return view('backend.teacher.show',compact('objTeacher'));
     }
 
     /**
@@ -93,7 +93,7 @@ class TeacherController extends Controller
     {
         
         $objTeacher = Teacher::findOrFail($id);
-        return view('backend.teachers.edit',compact('objTeacher'));
+        return view('backend.teacher.edit',compact('objTeacher'));
     }
 
     /**
@@ -103,17 +103,18 @@ class TeacherController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ValidateTeacher $request, $id)
+    public function update(TeacherValidate $request, $id)
     {
         //
         $objTeacher = Teacher::findOrFail($id);
 
         $objTeacher->name = $request->name;
-        $objTeacher->title = $request->title;
-        $objTeacher->age = $request->age;
-        $objTeacher->phone =$request->phone;
-        $objTeacher->facebook =$request->facebook;
-   
+        $objTeacher->position = $request->position;
+        $objTeacher->address = $request->address;
+        $objTeacher->facebook = $request->facebook;
+        $objTeacher->twitter = $request->twitter;
+        $objTeacher->linkedin = $request->linkedin;
+        $objTeacher->skype = $request->skype;
 
         # upload image 
         $image = "";
@@ -128,7 +129,10 @@ class TeacherController extends Controller
 
         $objTeacher->save();
 
-        return Redirect::back()->with('sucessMSG', 'Course Updated Succesfully !');
+
+ 
+
+        return Redirect::back()->with('sucessMSG', 'Teacher Updated Succesfully !');
 
          
     }
