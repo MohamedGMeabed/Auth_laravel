@@ -209,8 +209,7 @@
           $.ajax({
             type:"GET",
             url:"{{url('getsubcategories')}}"+"/"+id,
-            success:function(res) {
-                     
+            success:function(res) {  
                   $.each(res,function(key,value){
                   $('#subcategory').append('<option value="'+value.id+'">'+value.name+'</option>');
                 });              
