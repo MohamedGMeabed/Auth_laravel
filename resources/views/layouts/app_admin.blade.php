@@ -125,6 +125,13 @@
                 </a>
               </li>
 
+               <li class="nav-item">
+                <a class="nav-link {{ (Request::segment(1)=='admin' && Request::segment(2)=='fqa') ? 'active' : ''  }} " href="{{ url('admin/fqa') }}">
+                  <span data-feather="list"></span>
+                  FQA
+                </a>
+              </li>
+
                
                
               
