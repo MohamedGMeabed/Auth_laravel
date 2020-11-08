@@ -5,15 +5,7 @@
 
 <body class="">
 <div id="wrapper" class="clearfix">
-  <!-- preloader -->
-  {{-- <div id="preloader">
-    <div id="spinner">
-      <div class="preloader-dot-loading">
-        <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
-      </div>
-    </div>
-    <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
-  </div>   --}}
+ 
   
  
   
@@ -21,24 +13,7 @@
 
   <!-- Start main-content -->
   <div class="main-content">
-    <!-- Section: inner-header -->
-    {{-- <section class="inner-header divider parallax layer-overlay overlay-dark-5" data-bg-img="images/bg/bg3.jpg">
-      <div class="container pt-60 pb-60">
-        <!-- Section Content -->
-        <div class="section-content">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h3 class="font-28 text-white">Event Details 2</h2>
-              <ol class="breadcrumb text-center text-black mt-10">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pages</a></li>
-                <li class="active text-theme-colored">Page Title</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      </div>      
-    </section> --}}
+
     @include('layouts.breadcrubs')
 
     <section class="bg-theme-colored">
@@ -107,11 +82,7 @@
                 
               
               <div class="item"><img  src="{{ url('') }}/{{ $objEventSlider->photo }}"></div>
-              {{-- <div class="item"><img  src="{{ url('') }}/{{ $objEventSlider->photo }}"></div> --}}
-              {{-- <div class="item"><img src="https://placehold.it/755x480" alt=""></div>
-              <div class="item"><img src="https://placehold.it/755x480" alt=""></div>
-              <div class="item"><img src="https://placehold.it/755x480" alt=""></div>
-              <div class="item"><img src="https://placehold.it/755x480" alt=""></div> --}}
+  
               @endforeach
             </div>
           </div>
@@ -145,69 +116,7 @@
               </div>
               @endforeach
 
-              {{-- <div class="item">
-                <div class="attorney">
-                  <div class="thumb"><img src="images/team/2.jpg" alt=""></div>
-                  <div class="content text-center">
-                    <h5 class="author mb-0"><a class="text-theme-colored" href="#">Alex Jacobson</a></h5>
-                    <h6 class="title text-gray font-12 mt-0 mb-0">Businessman</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="attorney">
-                  <div class="thumb"><img src="images/team/3.jpg" alt=""></div>
-                  <div class="content text-center">
-                    <h5 class="author mb-0"><a class="text-theme-colored" href="#">Alex Jacobson</a></h5>
-                    <h6 class="title text-gray font-12 mt-0 mb-0">Student</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="attorney">
-                  <div class="thumb"><img src="images/team/4.jpg" alt=""></div>
-                  <div class="content text-center">
-                    <h5 class="author mb-0"><a class="text-theme-colored" href="#">Alex Jacobson</a></h5>
-                    <h6 class="title text-gray font-12 mt-0 mb-0">Lawyer</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="attorney">
-                  <div class="thumb"><img src="images/team/5.jpg" alt=""></div>
-                  <div class="content text-center">
-                    <h5 class="author mb-0"><a class="text-theme-colored" href="#">Alex Jacobson</a></h5>
-                    <h6 class="title text-gray font-12 mt-0 mb-0">Businessman</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="attorney">
-                  <div class="thumb"><img src="images/team/6.jpg" alt=""></div>
-                  <div class="content text-center">
-                    <h5 class="author mb-0"><a class="text-theme-colored" href="#">Alex Jacobson</a></h5>
-                    <h6 class="title text-gray font-12 mt-0 mb-0">Student</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="attorney">
-                  <div class="thumb"><img src="images/team/3.jpg" alt=""></div>
-                  <div class="content text-center">
-                    <h5 class="author mb-0"><a class="text-theme-colored" href="#">Alex Jacobson</a></h5>
-                    <h6 class="title text-gray font-12 mt-0 mb-0">Student</h6>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="attorney">
-                  <div class="thumb"><img src="images/team/4.jpg" alt=""></div>
-                  <div class="content text-center">
-                    <h5 class="author mb-0"><a class="text-theme-colored" href="#">Alex Jacobson</a></h5>
-                    <h6 class="title text-gray font-12 mt-0 mb-0">Lawyer</h6>
-                  </div>
-                </div>
-              </div> --}}
+              
             </div>
           </div>
         </div>
@@ -313,11 +222,7 @@
              
               <div class="item"><img src="{{ url('') }}/{{ $objEventPhotos->photo }}" alt=""></div>
               @endforeach
-              {{-- <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-              <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-              <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-              <div class="item"><img src="https://placehold.it/285x215" alt=""></div>
-              <div class="item"><img src="https://placehold.it/285x215" alt=""></div> --}}
+              
             </div>
           </div>
         </div>

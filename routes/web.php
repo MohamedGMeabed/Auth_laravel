@@ -45,18 +45,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
     return view('welcome');
   });
   
-  
-  
-  
-  
-  //Route::get('/','App\Http\Controllers\HomeController@index')->name('Home');
-//   Route::get('/index','App\Http\Controllers\HomeController@index');
-//   Route::get('/about-us','App\Http\Controllers\HomeController@AboutUs')->name('aboutus');
-//   Route::get('/contact-us','App\Http\Controllers\HomeController@ContactUs')->name('contactus');
- // Route::get('/course_details/{course_id}','App\Http\Controllers\HomeController@CourseDetails')->name('CourseDetails');
-//  Route::get('/events','App\Http\Controllers\HomeController@EventPage')->name('EventPage');
-//  Route::get('/event-details/{event_id}','App\Http\Controllers\HomeController@EventDetails')->name('EventDetails');
-  
+
   Route::post('/frontendregister','App\Http\Controllers\HomeController@Register');
   
   Route::get('/admin','App\Http\Controllers\AdminController@Dashboard');
@@ -123,7 +112,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
   Route::resource('admin/speakers', SpeakerController::class)->middleware('auth');
   
   
-  Route::get('/admin/speakerevents/{speaker_id}','App\Http\Controllers\SpeakerController@SpeakerEvents')->middleware('auth');;
+  Route::get('/admin/speakerevents/{speaker_id}','App\Http\Controllers\SpeakerController@SpeakerEvents')->middleware('auth');
   
   Route::post('/admin/speakerevents','App\Http\Controllers\SpeakerController@StoreSpeakerEvents')->middleware('auth');
   
@@ -152,33 +141,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
  Route::resource('admin/fqa', FqaController::class)->middleware('auth');
 
 
-// Route::get('/welcome', function () {
-//     return view('welcome');
-// });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-//     return view('dashboard');
-// })->name('dashboard');
-
-
-// //Route::resource('/', HomeController::class)->middleware('auth');
-
-// Route::get('/admin','App\Http\Controllers\AdminController@Dashboard')->middleware('auth');
-// // Route::get('/admin/dashboard','App\Http\Controllers\AdminController@Dashboard');
-// //================== teacher Moduel ==========================//
-// Route::resource('admin/teachers', TeacherController::class)->middleware('auth');
-// Route::resource('admin/events', EventController::class)->middleware('auth');
-// Route::resource('admin/speakers', SpeakerController::class)->middleware('auth');
-// Route::resource('admin/registers', RegisterationController::class)->middleware('auth');
-
-// Route::resource('admin/photos', PhotoController::class)->middleware('auth');
-
-
-// Route::get('/admin/eventphotos/{event_id}','App\Http\Controllers\EventController@EventPhotos')->middleware('auth');
-
-// Route::post('/admin/eventphotos','App\Http\Controllers\EventController@StoreEventPhotos')->middleware('auth');
-
-// Route::delete('/admin/eventphotos/{photo_id}','App\Http\Controllers\EventController@DestroyEventPhotos')->middleware('auth');
-
- 
+Route::get('/getsubcategories/{id}','App\Http\Controllers\MainCategoryController@LoadSubCategory');

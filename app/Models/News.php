@@ -18,6 +18,10 @@ class News extends Model
     public function NewsPhotos(){
         return $this->hasMany('App\Models\PhotoNews','news_id');
     }
+
+    public function NewsPhoto(){
+        return $this->hasOne('App\Models\PhotoNews','news_id');
+    }
     
 }
 
