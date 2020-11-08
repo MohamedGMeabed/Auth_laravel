@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05 نوفمبر 2020 الساعة 12:56
--- إصدار الخادم: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Nov 08, 2020 at 12:33 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `laravel_auth2`
+-- Database: `final_project`
 --
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `category_gallery`
+-- Table structure for table `category_gallery`
 --
 
 CREATE TABLE `category_gallery` (
@@ -36,7 +35,7 @@ CREATE TABLE `category_gallery` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `category_gallery`
+-- Dumping data for table `category_gallery`
 --
 
 INSERT INTO `category_gallery` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -47,7 +46,7 @@ INSERT INTO `category_gallery` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `comments`
+-- Table structure for table `comments`
 --
 
 CREATE TABLE `comments` (
@@ -61,7 +60,7 @@ CREATE TABLE `comments` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `courses`
+-- Table structure for table `courses`
 --
 
 CREATE TABLE `courses` (
@@ -77,7 +76,7 @@ CREATE TABLE `courses` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `courses`
+-- Dumping data for table `courses`
 --
 
 INSERT INTO `courses` (`id`, `name`, `price`, `description`, `rate`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -87,7 +86,7 @@ INSERT INTO `courses` (`id`, `name`, `price`, `description`, `rate`, `image`, `c
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `course_topics`
+-- Table structure for table `course_topics`
 --
 
 CREATE TABLE `course_topics` (
@@ -101,7 +100,7 @@ CREATE TABLE `course_topics` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `course_topics`
+-- Dumping data for table `course_topics`
 --
 
 INSERT INTO `course_topics` (`id`, `course_id`, `topic_name`, `duration`, `deleted_at`, `created_at`, `updated_at`) VALUES
@@ -111,7 +110,7 @@ INSERT INTO `course_topics` (`id`, `course_id`, `topic_name`, `duration`, `delet
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `events`
+-- Table structure for table `events`
 --
 
 CREATE TABLE `events` (
@@ -131,7 +130,7 @@ CREATE TABLE `events` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `events`
+-- Dumping data for table `events`
 --
 
 INSERT INTO `events` (`id`, `topics`, `description`, `source_title`, `source_title_writer`, `host`, `location`, `website`, `start_date`, `end_date`, `deleted_at`, `created_at`, `updated_at`) VALUES
@@ -142,7 +141,7 @@ INSERT INTO `events` (`id`, `topics`, `description`, `source_title`, `source_tit
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `event_photos`
+-- Table structure for table `event_photos`
 --
 
 CREATE TABLE `event_photos` (
@@ -156,7 +155,7 @@ CREATE TABLE `event_photos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `event_photos`
+-- Dumping data for table `event_photos`
 --
 
 INSERT INTO `event_photos` (`id`, `event_id`, `photo`, `type`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -184,7 +183,7 @@ INSERT INTO `event_photos` (`id`, `event_id`, `photo`, `type`, `created_at`, `up
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `event_registrations`
+-- Table structure for table `event_registrations`
 --
 
 CREATE TABLE `event_registrations` (
@@ -201,7 +200,7 @@ CREATE TABLE `event_registrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `event_registrations`
+-- Dumping data for table `event_registrations`
 --
 
 INSERT INTO `event_registrations` (`id`, `event_id`, `name`, `email`, `phone`, `ticket_type`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -216,7 +215,7 @@ INSERT INTO `event_registrations` (`id`, `event_id`, `name`, `email`, `phone`, `
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `event_speakers`
+-- Table structure for table `event_speakers`
 --
 
 CREATE TABLE `event_speakers` (
@@ -229,7 +228,7 @@ CREATE TABLE `event_speakers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `event_speakers`
+-- Dumping data for table `event_speakers`
 --
 
 INSERT INTO `event_speakers` (`id`, `event_id`, `speaker_id`, `deleted_at`, `created_at`, `updated_at`) VALUES
@@ -245,7 +244,7 @@ INSERT INTO `event_speakers` (`id`, `event_id`, `speaker_id`, `deleted_at`, `cre
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `failed_jobs`
+-- Table structure for table `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -255,13 +254,13 @@ CREATE TABLE `failed_jobs` (
   `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `features`
+-- Table structure for table `features`
 --
 
 CREATE TABLE `features` (
@@ -275,11 +274,11 @@ CREATE TABLE `features` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `features`
+-- Dumping data for table `features`
 --
 
 INSERT INTO `features` (`id`, `title`, `description`, `icon`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Easy Customiz', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non null', 'pen', '2020-11-02 19:04:50', '2020-11-02 19:21:07', NULL),
+(1, 'Easy Customiz', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non null', 'pen', '2020-11-02 19:04:50', '2020-11-04 11:56:58', '2020-11-04 11:56:58'),
 (2, 'Easy Customiz', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non null', 'pen', '2020-11-02 19:04:52', '2020-11-02 19:05:35', '2020-11-02 19:05:35'),
 (3, 'Easy Customiz', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non null', 'pen', '2020-11-02 19:04:52', '2020-11-02 19:05:32', '2020-11-02 19:05:32'),
 (4, 'Easy Customiz', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias non null', 'pen', '2020-11-02 19:04:53', '2020-11-02 19:05:31', '2020-11-02 19:05:31'),
@@ -292,7 +291,34 @@ INSERT INTO `features` (`id`, `title`, `description`, `icon`, `created_at`, `upd
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `galleries`
+-- Table structure for table `fqas`
+--
+
+CREATE TABLE `fqas` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `question` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `fqas`
+--
+
+INSERT INTO `fqas` (`id`, `question`, `answer`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'What is ERP? Guide to enterprise resource planning software', 'ERP, or enterprise resource planning, is modular software designed to integrate the main functions of an organization\'s business processes into a unified system.  An ERP system consists of software components, usually called modules, that each focus on an essential business function, such as finance and accounting, HR, production, materials management and customer relationship management (CRM). Organizations only use the modules they need to run their particular business.', '2020-11-04 11:57:11', '2020-11-04 11:55:54', '2020-11-04 11:57:11'),
+(2, 'What is ERP? Guide to enterprise resource planning software', 'ERP, or enterprise resource planning, is modular software designed to integrate the main functions of an organization\'s business processes into a unified system.  An ERP system consists of software components, usually called modules, that each focus on an essential business function, such as finance and accounting, HR, production, materials management and customer relationship management (CRM). Organizations only use the modules they need to run their particular business.', '2020-11-04 11:58:49', '2020-11-04 11:57:21', '2020-11-04 11:58:49'),
+(3, 'How ERP works', 'Two characteristics distinguish ERP software from collections of more narrowly focused business software, which vendors and industry analysts often refer to as best-of-breed.  The first is the integration between modules that enables them and their users to interact. For example, a sales order created in the CRM module will be shared with the production module, so the manufacturing department will have the information about what product to make. When the product is shipped, data in the inventory management module changes, and when the customer pays, the accounting module records the revenue.  The other distinguishing feature of ERP software is a central database in which modules record transactions and other information, access that data and share it. Having what the ERP industry calls a \"single source of truth\" saves users from having to enter information more than once. This in turn improves data accuracy, facilitates reporting and enables collaboration between departments.', '2020-11-04 11:58:51', '2020-11-04 11:57:47', '2020-11-04 11:58:51'),
+(4, 'How does Google protect my privacy and keep my information secure?', 'We know security and privacy are important to you – and they are important to us, too. We make it a priority to provide strong security and give you confidence that your information is safe and accessible when you need it.  We’re constantly working to ensure strong security, protect your privacy, and make Google even more effective and efficient for you. We spend hundreds of millions of dollars every year on security, and employ world-renowned experts in data security to keep your information safe. We also built easy-to-use privacy and security tools like Google Dashboard, 2-step verification and Ads Settings. So when it comes to the information you share with Google, you’re in control.  You can learn more about safety and security online, including how to protect yourself and your family online, at the Google Safety Center.  Learn more about how we keep your personal information private and safe — and put you in control.', '2020-11-04 12:06:08', '2020-11-04 11:59:09', '2020-11-04 12:06:08'),
+(5, 'How can I remove information about myself from Google\'s search results?', 'Google search results are a reflection of the content publicly available on the web. Search engines can’t remove content directly from websites, so removing search results from Google wouldn’t remove the content from the web. If you want to remove something from the web, you should contact the webmaster of the site the content is posted on and ask him or her to make a change. Once the content has been removed and Google has noted the update, the information will no longer appear in Google’s search results. If you have an urgent removal request, you can also visit our help page for more information.', NULL, '2020-11-04 11:59:24', '2020-11-04 11:59:24'),
+(6, 'Are my search queries sent to websites when I click on Google Search results?', 'In some cases, yes. When you click on a search result in Google Search, your web browser also may send the Internet address, or URL, of the search results page to the destination webpage as the Referrer URL. The URL of the search results page may sometimes contain the search query you entered. If you are using SSL Search (Google’s encrypted search functionality), under most circumstances, your search terms will not be sent as part of the URL in the Referrer URL. There are some exceptions to this behavior, such as if you are using some less popular browsers. More information on SSL Search can be found here. Search queries or information contained in the Referrer URL may be available via Google Analytics or an application programming interface (API). In addition, advertisers may receive information relating to the exact keywords that triggered an ad click.', NULL, '2020-11-04 11:59:40', '2020-11-04 11:59:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galleries`
 --
 
 CREATE TABLE `galleries` (
@@ -304,7 +330,7 @@ CREATE TABLE `galleries` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `galleries`
+-- Dumping data for table `galleries`
 --
 
 INSERT INTO `galleries` (`id`, `image`, `cat_id`, `created_at`, `updated_at`) VALUES
@@ -317,7 +343,7 @@ INSERT INTO `galleries` (`id`, `image`, `cat_id`, `created_at`, `updated_at`) VA
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `main_categories`
+-- Table structure for table `main_categories`
 --
 
 CREATE TABLE `main_categories` (
@@ -328,7 +354,7 @@ CREATE TABLE `main_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `main_categories`
+-- Dumping data for table `main_categories`
 --
 
 INSERT INTO `main_categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
@@ -339,7 +365,7 @@ INSERT INTO `main_categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -349,7 +375,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -362,6 +388,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (7, '2020_05_21_200000_create_team_user_table', 1),
 (8, '2020_10_14_233034_create_sessions_table', 1),
 (9, '2020_10_15_113302_create_courses_table', 1),
+(10, '2020_10_15_113340_create_teachers_table', 1),
 (11, '2020_10_15_113409_create_sliders_table', 1),
 (12, '2020_10_18_140937_create_events_table', 1),
 (13, '2020_10_18_142158_create_speakers_table', 1),
@@ -379,13 +406,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (26, '2020_11_02_124954_create_galleries_table', 5),
 (27, '2020_11_02_204408_create_features_table', 6),
 (28, '2020_11_03_115432_create_course_topics_table', 7),
-(29, '2020_11_04_122157_create_fqas_table', 8),
-(30, '2020_11_05_111812_create_teachers_table', 9);
+(29, '2020_11_04_125919_create_fqas_table', 8);
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `news`
+-- Table structure for table `news`
 --
 
 CREATE TABLE `news` (
@@ -400,7 +426,7 @@ CREATE TABLE `news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `news`
+-- Dumping data for table `news`
 --
 
 INSERT INTO `news` (`id`, `title`, `details`, `auther`, `tags`, `sub_cat_id`, `created_at`, `updated_at`) VALUES
@@ -410,7 +436,7 @@ INSERT INTO `news` (`id`, `title`, `details`, `auther`, `tags`, `sub_cat_id`, `c
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `password_resets`
+-- Table structure for table `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -422,7 +448,7 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `personal_access_tokens`
+-- Table structure for table `personal_access_tokens`
 --
 
 CREATE TABLE `personal_access_tokens` (
@@ -431,7 +457,7 @@ CREATE TABLE `personal_access_tokens` (
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `abilities` text COLLATE utf8mb4_unicode_ci,
+  `abilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -440,7 +466,7 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `photo_news`
+-- Table structure for table `photo_news`
 --
 
 CREATE TABLE `photo_news` (
@@ -452,7 +478,7 @@ CREATE TABLE `photo_news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `photo_news`
+-- Dumping data for table `photo_news`
 --
 
 INSERT INTO `photo_news` (`id`, `photo`, `news_id`, `created_at`, `updated_at`) VALUES
@@ -462,31 +488,29 @@ INSERT INTO `photo_news` (`id`, `photo`, `news_id`, `created_at`, `updated_at`) 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `sessions`
+-- Table structure for table `sessions`
 --
 
 CREATE TABLE `sessions` (
   `id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint(20) UNSIGNED DEFAULT NULL,
   `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
+  `user_agent` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `payload` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `sessions`
+-- Dumping data for table `sessions`
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('arCavIutD2SerC2KAz1fKWDtLhFmj6otXF4OI5vY', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiTjgyOU1PaUV1aW80dnB4bFVMSGNQVHdXV0FCTDJWbWx0WWJmWDYyNCI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjQzOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYWRtaW4vdGVhY2hlcnMvY3JlYXRlIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFo3RjY0R1JwRG1zS0lMcUQySjJreE8xS0c0RXQ5ZkdLSnVuRDBTbG1iU0tJUzRyUFhJLmFDIjt9', 1604576257),
-('pJk4kqBcooHmR4kGlSWFIW3iSWE4F6vudLU5WbpV', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiNE94a09tdEt2YmNocEdXcXpBd0lRQVBLc1AwT3dObXVZTnBCMnkwTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJuZXciO2E6MDp7fXM6Mzoib2xkIjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hciI7fXM6NjoibG9jYWxlIjtzOjI6ImFyIjt9', 1604576808),
-('Redohni2iI0COkRcuHVN2HaJHq1QqhEgP50eN4SY', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 6.3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiQVRiU1h0SE83QU5wUzFab05DUmREQXI1RE9SbmVNVDNHV1RpT3YydiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJuZXciO2E6MDp7fXM6Mzoib2xkIjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjQ6Imh0dHA6Ly9sb2NhbGhvc3Q6ODAwMC9lbiI7fXM6NjoibG9jYWxlIjtzOjI6ImVuIjt9', 1604514299);
+('AKfeDjJs7NvthHVLAwMlal2lmHMCv6O2d4t5qoj2', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoibk5DZ044ZDBYa0MxQzR0YklCU1I4a3lxcUdXRk80QUt3U20xbVdrRiI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czozMToiaHR0cDovL2xvY2FsaG9zdDo4MDAwL2FkbWluL2ZxYSI7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjI0OiJodHRwOi8vbG9jYWxob3N0OjgwMDAvZW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6MTc6InBhc3N3b3JkX2hhc2hfd2ViIjtzOjYwOiIkMnkkMTAkZXEvQXVpRUVla2lDWWt1TUE5bFFLdUlsNkFTMXRiY3FyTGtpM0I4MllmR0hHd0owM09lU08iO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJGVxL0F1aUVFZWtpQ1lrdU1BOWxRS3VJbDZBUzF0YmNxckxraTNCODJZZkdIR3dKMDNPZVNPIjtzOjY6ImxvY2FsZSI7czoyOiJlbiI7fQ==', 1604501162);
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `sliders`
+-- Table structure for table `sliders`
 --
 
 CREATE TABLE `sliders` (
@@ -502,7 +526,7 @@ CREATE TABLE `sliders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `sliders`
+-- Dumping data for table `sliders`
 --
 
 INSERT INTO `sliders` (`id`, `title1`, `title2`, `link`, `description`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -513,7 +537,7 @@ INSERT INTO `sliders` (`id`, `title1`, `title2`, `link`, `description`, `image`,
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `speakers`
+-- Table structure for table `speakers`
 --
 
 CREATE TABLE `speakers` (
@@ -526,7 +550,7 @@ CREATE TABLE `speakers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `speakers`
+-- Dumping data for table `speakers`
 --
 
 INSERT INTO `speakers` (`id`, `name`, `position`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -539,7 +563,7 @@ INSERT INTO `speakers` (`id`, `name`, `position`, `created_at`, `updated_at`, `d
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `sub_categories`
+-- Table structure for table `sub_categories`
 --
 
 CREATE TABLE `sub_categories` (
@@ -551,7 +575,7 @@ CREATE TABLE `sub_categories` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `sub_categories`
+-- Dumping data for table `sub_categories`
 --
 
 INSERT INTO `sub_categories` (`id`, `name`, `main_cat_id`, `created_at`, `updated_at`) VALUES
@@ -562,15 +586,14 @@ INSERT INTO `sub_categories` (`id`, `name`, `main_cat_id`, `created_at`, `update
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `teachers`
+-- Table structure for table `teachers`
 --
 
 CREATE TABLE `teachers` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `position` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` char(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `age` int(11) NOT NULL,
   `facebook` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `twitter` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `linkedin` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -579,17 +602,10 @@ CREATE TABLE `teachers` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- إرجاع أو استيراد بيانات الجدول `teachers`
---
-
-INSERT INTO `teachers` (`id`, `name`, `position`, `address`, `image`, `facebook`, `twitter`, `linkedin`, `skype`, `created_at`, `updated_at`) VALUES
-(1, 'Mohamed Gaber', 'web Developer', 'Bani Suef', 'images/teachers/1604576256.JPG', 'https://www.facebook.com/profile.php?id=100004182104364', 'https://www.facebook.com/profile.php?id=100004182104364', 'https://www.facebook.com/profile.php?id=100004182104364', 'https://www.facebook.com/profile.php?id=100004182104364', '2020-11-05 09:37:36', '2020-11-05 09:37:36');
-
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `teams`
+-- Table structure for table `teams`
 --
 
 CREATE TABLE `teams` (
@@ -602,16 +618,17 @@ CREATE TABLE `teams` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `teams`
+-- Dumping data for table `teams`
 --
 
 INSERT INTO `teams` (`id`, `user_id`, `name`, `personal_team`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Mohamed\'s Team', 1, '2020-10-21 14:28:52', '2020-10-21 14:28:52');
+(1, 1, 'Mohamed\'s Team', 1, '2020-10-21 14:28:52', '2020-10-21 14:28:52'),
+(2, 2, 'Bassem\'s Team', 1, '2020-11-04 11:30:49', '2020-11-04 11:30:49');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `team_user`
+-- Table structure for table `team_user`
 --
 
 CREATE TABLE `team_user` (
@@ -626,7 +643,7 @@ CREATE TABLE `team_user` (
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `testimonials`
+-- Table structure for table `testimonials`
 --
 
 CREATE TABLE `testimonials` (
@@ -641,7 +658,7 @@ CREATE TABLE `testimonials` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `testimonials`
+-- Dumping data for table `testimonials`
 --
 
 INSERT INTO `testimonials` (`id`, `name`, `position`, `description`, `photo`, `created_at`, `updated_at`, `deleted_at`) VALUES
@@ -652,7 +669,7 @@ INSERT INTO `testimonials` (`id`, `name`, `position`, `description`, `photo`, `c
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -661,21 +678,22 @@ CREATE TABLE `users` (
   `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `two_factor_secret` text COLLATE utf8mb4_unicode_ci,
-  `two_factor_recovery_codes` text COLLATE utf8mb4_unicode_ci,
+  `two_factor_secret` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `two_factor_recovery_codes` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `current_team_id` bigint(20) UNSIGNED DEFAULT NULL,
-  `profile_photo_path` text COLLATE utf8mb4_unicode_ci,
+  `profile_photo_path` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'Mohamed Gaber', 'mgm@gmail.com', NULL, '$2y$10$Z7F64GRpDmsKILqD2J2kxO1KG4Et9fGKJunD0SlmbSKIS4rPXI.aC', NULL, NULL, NULL, 1, NULL, '2020-10-21 14:28:52', '2020-10-21 14:28:55');
+(1, 'Mohamed Gaber', 'mgm@gmail.com', NULL, '$2y$10$Z7F64GRpDmsKILqD2J2kxO1KG4Et9fGKJunD0SlmbSKIS4rPXI.aC', NULL, NULL, NULL, 1, NULL, '2020-10-21 14:28:52', '2020-10-21 14:28:55'),
+(2, 'Bassem Kamal', 'dev.bassem.kamal@gmail.com', NULL, '$2y$10$eq/AuiEEekiCYkuMA9lQKuIl6AS1tbcqrLki3B82YfGHGwJ03OeSO', NULL, NULL, NULL, 2, NULL, '2020-11-04 11:30:49', '2020-11-04 11:30:50');
 
 --
 -- Indexes for dumped tables
@@ -747,6 +765,12 @@ ALTER TABLE `failed_jobs`
 -- Indexes for table `features`
 --
 ALTER TABLE `features`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fqas`
+--
+ALTER TABLE `fqas`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -921,6 +945,12 @@ ALTER TABLE `features`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `fqas`
+--
+ALTER TABLE `fqas`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
@@ -936,7 +966,7 @@ ALTER TABLE `main_categories`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -978,13 +1008,13 @@ ALTER TABLE `sub_categories`
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `team_user`
@@ -1002,63 +1032,63 @@ ALTER TABLE `testimonials`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- قيود الجداول المحفوظة
+-- Constraints for dumped tables
 --
 
 --
--- القيود للجدول `comments`
+-- Constraints for table `comments`
 --
 ALTER TABLE `comments`
   ADD CONSTRAINT `comments_news_id_foreign` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`);
 
 --
--- القيود للجدول `course_topics`
+-- Constraints for table `course_topics`
 --
 ALTER TABLE `course_topics`
   ADD CONSTRAINT `course_topics_course_id_foreign` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`);
 
 --
--- القيود للجدول `event_photos`
+-- Constraints for table `event_photos`
 --
 ALTER TABLE `event_photos`
   ADD CONSTRAINT `event_photos_event_id_foreign` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`);
 
 --
--- القيود للجدول `event_registrations`
+-- Constraints for table `event_registrations`
 --
 ALTER TABLE `event_registrations`
   ADD CONSTRAINT `event_registrations_event_id_foreign` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`);
 
 --
--- القيود للجدول `event_speakers`
+-- Constraints for table `event_speakers`
 --
 ALTER TABLE `event_speakers`
   ADD CONSTRAINT `event_speakers_event_id_foreign` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`),
   ADD CONSTRAINT `event_speakers_speaker_id_foreign` FOREIGN KEY (`speaker_id`) REFERENCES `speakers` (`id`);
 
 --
--- القيود للجدول `galleries`
+-- Constraints for table `galleries`
 --
 ALTER TABLE `galleries`
   ADD CONSTRAINT `galleries_cat_id_foreign` FOREIGN KEY (`cat_id`) REFERENCES `category_gallery` (`id`);
 
 --
--- القيود للجدول `news`
+-- Constraints for table `news`
 --
 ALTER TABLE `news`
   ADD CONSTRAINT `news_sub_cat_id_foreign` FOREIGN KEY (`sub_cat_id`) REFERENCES `sub_categories` (`id`);
 
 --
--- القيود للجدول `photo_news`
+-- Constraints for table `photo_news`
 --
 ALTER TABLE `photo_news`
   ADD CONSTRAINT `photo_news_news_id_foreign` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`);
 
 --
--- القيود للجدول `sub_categories`
+-- Constraints for table `sub_categories`
 --
 ALTER TABLE `sub_categories`
   ADD CONSTRAINT `sub_categories_main_cat_id_foreign` FOREIGN KEY (`main_cat_id`) REFERENCES `main_categories` (`id`);
