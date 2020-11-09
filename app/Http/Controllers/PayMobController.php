@@ -108,9 +108,8 @@ class PayMobController extends Controller
             "lock_order_when_paid"=> "false",
         ];
 
-        $this->callApi($url,$data);
-       
-        //print_r($ReturnData); die;
+        $ReturnData = $this->callApi($url,$data);
+        print_r($ReturnData); die;
     }
 
 
