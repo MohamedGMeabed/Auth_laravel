@@ -14,6 +14,8 @@ use App\Http\Controllers\CategoryGalleryController;
 use App\Http\Controllers\FeaturesController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\FqaController;
+use App\Http\Controllers\PayMobController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -150,6 +152,10 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
  ##############################    FQA Module   ##############################
 
  Route::resource('admin/fqa', FqaController::class)->middleware('auth');
+
+ ##############################    PayMob Module   ##############################
+
+ Route::get('/book_course','App\Http\Controllers\PayMobController@BookCourse');
 
 
 // Route::get('/welcome', function () {

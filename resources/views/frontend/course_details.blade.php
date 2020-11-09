@@ -42,7 +42,10 @@
                 </ul>
               <h5><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo unde, <span class="text-theme-color-2">accounting technologies</span> corporis dolorum blanditiis ullam officia <span class="text-theme-color-2">our university </span>natus minima fugiat repellat! Corrupti voluptatibus aperiam voluptatem. Exercitationem, placeat, cupiditate.</em></h5>
               <p>{{$ObjCourse->description}}</p>
-            
+              
+              <a class="btn btn-primary" href="/book_course"> Book </a>
+
+
               <h4 class="line-bottom mt-20 mb-20 text-theme-colored">Course Topics</h4>
               <ul id="myTab" class="nav nav-tabs boot-tabs">
                 <li class="active"><a href="#small" data-toggle="tab" >Topic Names</a></li>
