@@ -125,6 +125,7 @@
                 </a>
               </li>
 
+<<<<<<< HEAD
               <li class="nav-item">
                 <a class="nav-link {{ (Request::segment(1)=='admin' && (Request::segment(2)=='fqa' )) ? 'active' : ''  }} "
                 href="{{ url('admin/fqa') }}">
@@ -132,6 +133,16 @@
                   FQA
                 </a>
               </li>
+=======
+               <li class="nav-item">
+                <a class="nav-link {{ (Request::segment(1)=='admin' && Request::segment(2)=='fqa') ? 'active' : ''  }} " href="{{ url('admin/fqa') }}">
+                  <span data-feather="list"></span>
+                  FQA
+                </a>
+              </li>
+
+               
+>>>>>>> b98d1b9c40e589c159a57173a329b4ca5703be5c
                
               
             </ul>
@@ -149,6 +160,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"><\/script>');</script>
     <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js"></script>
@@ -157,7 +169,7 @@
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
-      feather.replace()
+      feather.replace();
     </script>
 
     @if(Request::segment(1)=='admin' && Request::segment(2)=='dashboard')
@@ -194,6 +206,29 @@
     </script>
     @endif
 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $("#maincategory").on("change",function(){
+          let id =$(this).val();
+          $('#subcategory').empty();
+          $('#subcategory').append('<option value="0" disabled selected>Select Sub Category</option>');
+
+          $.ajax({
+            type:"GET",
+            url:"{{url('getsubcategories')}}"+"/"+id,
+            success:function(res) {  
+                  $.each(res,function(key,value){
+                  $('#subcategory').append('<option value="'+value.id+'">'+value.name+'</option>');
+                });              
+          }
+          });
+
+        });
+      }); 
+</script>
 
   </body>
 </html>

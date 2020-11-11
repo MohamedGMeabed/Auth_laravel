@@ -2,7 +2,7 @@
 {{-- 
   <html @if(LaravelLocalization::getCurrentLocale()=='ar') dir="rtl" @endif lang="en"> --}}
     <html @if(App::getLocale()=='ar') dir="rtl" @endif lang="en">
-   {{-- <html dir="@if(Request::segment(1)=='ar') rtl @endif" lang="@if(Request::segment(1)=='ar') ar @endif" > --}}
+
 <head>
 
 <!-- Meta Tags -->
@@ -13,7 +13,7 @@
 <meta name="author" content="ThemeMascot" />
 
 <!-- Page Title -->
-{{-- <title>@yield('title')</title> --}}
+
 <title>{{$title}}</title>
 
 <!-- Favicon and Touch Icons -->
@@ -111,9 +111,7 @@
                 <a class="text-white" href="#">{{__('messages.helpdesk')}}</a>
                 </li>
                 <li class="text-white">|</li>
-                <li>
-                  <a class="text-white" href="#">{{__('messages.login')}}</a>
-                </li>
+                
              
                 @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                 <li>
@@ -130,57 +128,7 @@
             <div class="widget m-0 pull-right sm-pull-none sm-text-center">
               <ul class="list-inline pull-right">
                 <li class="mb-0 pb-0">
-                  <div class="top-dropdown-outer pt-5 pb-10">
-                    <a class="top-cart-link has-dropdown text-white text-hover-theme-colored"><i class="fa fa-shopping-cart font-13"></i> (12)</a>
-                    <ul class="dropdown">
-                      <li>
-                        <!-- dropdown cart -->
-                        <div class="dropdown-cart">
-                          <table class="table cart-table-list table-responsive">
-                            <tbody>
-                              <tr>
-                                <td><a href="#"><img alt="" src="http://placehold.it/85x85"></a></td>
-                                <td><a href="#"> Product Title</a></td>
-                                <td>X3</td>
-                                <td>$ 100.00</td>
-                                <td><a class="close" href="#"><i class="fa fa-close font-13"></i></a></td>
-                              </tr>
-                              <tr>
-                                <td><a href="#"><img alt="" src="http://placehold.it/85x85"></a></td>
-                                <td><a href="#"> Product Title</a></td>
-                                <td>X2</td>
-                                <td>$ 70.00</td>
-                                <td><a class="close" href="#"><i class="fa fa-close font-13"></i></a></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <div class="total-cart text-right">
-                            <table class="table table-responsive">
-                              <tbody>
-                                <tr>
-                                  <td>Cart Subtotal</td>
-                                  <td>$170.00</td>
-                                </tr>
-                                <tr>
-                                  <td>Shipping and Handling</td>
-                                  <td>$20.00</td>
-                                </tr>
-                                <tr>
-                                  <td>Order Total</td>
-                                  <td>$190.00</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                          <div class="cart-btn text-right">
-                              <a class="btn btn-theme-colored btn-xs" href="shop-cart.html"> View cart</a>
-                              <a class="btn btn-dark btn-xs" href="shop-checkout.html"> Checkout</a>
-                          </div>
-                        </div>
-                        <!-- dropdown cart ends -->
-                      </li>
-                    </ul>
-                  </div>
+                 
                 </li>
                 <li class="mb-0 pb-0">
                   <div class="top-dropdown-outer pt-5 pb-10">
@@ -226,7 +174,7 @@
                 <li><i class="fa fa-phone-square text-theme-colored font-36 mt-5 sm-display-block"></i></li>
                 <li>
                   <a href="#" class="font-12 text-gray text-uppercase">{{__('messages.callustoday')}}</a>
-                  <h5 class="font-14 m-0"> +(012) 345 6789</h5>
+                  <h5 class="font-14 m-0">011234567896</h5>
                 </li>
               </ul>
             </div>
@@ -310,8 +258,8 @@
           <div class="widget dark">
             <h5 class="widget-title mb-10">{{__('messages.callusnow')}}</h5>
             <div class="text-gray">
-              +61 3 1234 5678 <br>
-              +12 3 1234 5678
+              01278345652 <br>
+              01352476857
             </div>
           </div>
         </div>
@@ -330,16 +278,16 @@
         </div>
         <div class="col-md-5 col-md-offset-2">
           <div class="widget dark">
-            <h5 class="widget-title mb-10">{{__('messages.subscribe')}}</h5>
+           {{-- <h5 class="widget-title mb-10">{{__('messages.subscribe')}}</h5>
             <!-- Mailchimp Subscription Form Starts Here -->
-            <form id="mailchimp-subscription-form-footer" class="newsletter-form">
+             <form id="mailchimp-subscription-form-footer" class="newsletter-form">
               <div class="input-group">
                 <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control input-lg font-16" data-height="45px" id="mce-EMAIL-footer">
                 <span class="input-group-btn">
                   <button data-height="45px" class="btn bg-theme-color-2 text-white btn-xs m-0 font-14" type="submit">{{__('messages.subscribe')}}</button>
                 </span>
               </div>
-            </form>
+            </form> --}}
             <!-- Mailchimp Subscription Form Validation-->
             <script type="text/javascript">
               $('#mailchimp-subscription-form-footer').ajaxChimp({
@@ -414,3 +362,7 @@
 
 </body>
 </html>
+
+
+
+

@@ -121,4 +121,11 @@ class MainCategoryController extends Controller
         SubCategory::findOrFail($sub_id)->delete();
         return Redirect::back()->with('sucessMSG', 'Sub Category Deleted Succesfully !');
     }
+
+
+    public function LoadSubCategory($id){
+        $arrSubCategory =SubCategory::where('main_cat_id',$id)->get();
+        return response($arrSubCategory ,200);
+
+    }
 }
