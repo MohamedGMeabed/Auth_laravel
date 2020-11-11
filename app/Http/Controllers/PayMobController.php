@@ -10,7 +10,7 @@ class PayMobController extends Controller
 
     public function BookCourse()
     {
-        $api_key = "ZXlKaGJHY2lPaUpJVXpVe...";  // ********** replace this key with yours
+        $api_key = "ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2TkRFMk5Ea3NJbTVoYldVaU9pSnBibWwwYVdGc0luMC51QkVGdW1BUWRGSkRwaVRxdkRVcWs1LVdkVWFZekRDal84X0diZURyVUUxa0pXWWc5Rm9oWnZWTHdYVk5lUWFPWlZyOGlYMjlUM2E0djJfeXh0RmFLZw==";  // ********** replace this key with yours
         $this->getAuthTocken($api_key);
     }
 
@@ -24,7 +24,7 @@ class PayMobController extends Controller
         $ReturnData = $this->callApi($url,$data);    
         
         $token = $ReturnData->token;  // get token drom the response
-        //print_r($token); die;
+        
         $this->registerPayMobOreder($token);  // registe an order with this token
     } 
 
@@ -36,7 +36,7 @@ class PayMobController extends Controller
             "delivery_needed"=> false,
             "amount_cents"=> "100",
             "currency"=> "EGP",
-            "merchant_order_id"=> 5,
+            "merchant_order_id"=> time(),
             "items"=> [
                 [
                     "name"=> "ASC1515",
@@ -73,8 +73,9 @@ class PayMobController extends Controller
 
        
         $ReturnData = $this->callApi($url,$data); 
+        
         $orderId = $ReturnData->id;
-        print_r($orderId); die;   //******* ErrorException Undefined property: stdClass::$id  */ 
+          //******* ErrorException Undefined property: stdClass::$id  */ 
         $this->requestPaymentKey($token,$orderId);
     }
     
@@ -104,12 +105,13 @@ class PayMobController extends Controller
             ],
             
             "currency"=> "EGP", 
-            "integration_id"=> 1,
+            "integration_id"=> 103652, //https://accept.paymob.com/portal2/en/PaymentIntegrations
             "lock_order_when_paid"=> "false",
         ];
 
         $ReturnData = $this->callApi($url,$data);
-        print_r($ReturnData); die;
+        $PayToken = $ReturnData->token;
+        return view('frontend.payment1',compact('PayToken'));
     }
 
 
