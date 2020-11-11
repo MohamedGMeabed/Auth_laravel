@@ -156,7 +156,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
  ##############################    PayMob Module   ##############################
 
  Route::get('/book_course','App\Http\Controllers\PayMobController@BookCourse');
-
+ Route::get('/paymentcallBack','App\Http\Controllers\PayMobController@callBack');
+ 
 
 // Route::get('/welcome', function () {
 //     return view('welcome');

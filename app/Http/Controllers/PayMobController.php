@@ -36,8 +36,9 @@ class PayMobController extends Controller
             "delivery_needed"=> false,
             "amount_cents"=> "100",
             "currency"=> "EGP",
-            "merchant_order_id"=> time(),
+            "merchant_order_id"=> time(),  // this merc hant_order_ir should be uniqe 
             "items"=> [
+                // this item should ben replaced with course name and price and other details you want
                 [
                     "name"=> "ASC1515",
                     "amount_cents"=> "500000",
@@ -75,7 +76,6 @@ class PayMobController extends Controller
         $ReturnData = $this->callApi($url,$data); 
         
         $orderId = $ReturnData->id;
-          //******* ErrorException Undefined property: stdClass::$id  */ 
         $this->requestPaymentKey($token,$orderId);
     }
     
@@ -111,7 +111,21 @@ class PayMobController extends Controller
 
         $ReturnData = $this->callApi($url,$data);
         $PayToken = $ReturnData->token;
-        return view('frontend.payment1',compact('PayToken'));
+
+        // this just for bug with cach
+        echo '    <iframe  width="100%" height="100%" src="https://accept.paymobsolutions.com/api/acceptance/iframes/113417?payment_token='.$PayToken.'" frameborder="0"></iframe>
+        ';
+        // return to view showen iframe from thisi link
+        //https://accept.paymob.com/portal2/en/iframes
+       // return view('frontend.about');
+        //return view('frontend.payment1',compact('PayToken'));
+    }
+
+    public function paymentcallBack(request $request)
+    {
+        // check if query parameter with this request argument and make your validation
+
+        print_r('here');
     }
 
 
